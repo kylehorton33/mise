@@ -1,11 +1,11 @@
 <script>
-  import Dropdown from './Dropdown.svelte'
+  import Sidebar from './Sidebar.svelte'
   import { Search } from '$lib/icons'
 </script>
 
 <nav class="navbar bg-base-300">
   <div class="navbar-start">
-    <Dropdown />
+    <Sidebar />
   </div>
   <div class="navbar-center">
     <a href="/" class="btn btn-ghost text-xl lowercase">mise</a>
