@@ -14,4 +14,5 @@ npm create svelte@latest client -y
 cd client/
 npm i
 npx svelte-add@latest tailwindcss --tailwindcss-daisyui
+npm i
 ```
