@@ -8,7 +8,7 @@
     <Dropdown />
   </div>
   <div class="navbar-center">
-    <span class="btn btn-ghost text-xl lowercase">mise</span>
+    <a href="/" class="btn btn-ghost text-xl lowercase">mise</a>
   </div>
   <div class="navbar-end">
     <button class="btn btn-ghost btn-circle">
