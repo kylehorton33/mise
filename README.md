@@ -1,4 +1,3 @@
-
 # Set Up `client/`
 
 - Svelte
@@ -16,3 +15,7 @@ npm i
 npx svelte-add@latest tailwindcss --tailwindcss-daisyui
 npm i
 ```
+
+# Features
+
+- Navbar
