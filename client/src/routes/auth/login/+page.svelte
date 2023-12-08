@@ -6,12 +6,14 @@
   <input
     type="email"
     aria-label="email"
+    name="email"
     placeholder="Email"
     class="input input-bordered input-primary w-full max-w-xs"
   />
   <input
     type="password"
     aria-label="password"
+    name="password"
     placeholder="Password"
     class="input input-bordered input-primary w-full max-w-xs"
   />

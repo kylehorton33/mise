@@ -19,4 +19,4 @@ npm i
 # Features
 
 - Navbar
-- Login Page
+- Login Page, simulate user

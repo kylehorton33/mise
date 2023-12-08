@@ -32,5 +32,7 @@ test('login page works', async ({ page }) => {
   await page.getByLabel('password').fill('password')
   await page.getByRole('button', { name: 'Login' }).click()
 
-  await expect(page.url()).toContain('/auth/my-account')
+  await expect(
+    page.getByRole('heading', { name: 'user logged in' })
+  ).toBeVisible()
 })
