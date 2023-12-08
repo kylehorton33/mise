@@ -1,5 +1,5 @@
 <form
-  action="?/login"
+  action="/auth?/login"
   method="post"
   class="flex flex-col h-full justify-center items-center space-y-4"
 >
