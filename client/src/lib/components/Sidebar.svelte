@@ -1,5 +1,13 @@
 <script>
-  import { Menu } from '$lib/icons'
+  import {
+    Bottle,
+    Glass,
+    Menu,
+    Login,
+    About,
+    Account,
+    Logout
+  } from '$lib/icons'
 
   import { user } from '$lib/stores'
 
@@ -22,22 +30,38 @@
     <ul class="menu mt-16 p-4 w-52 bg-base-200 text-base-content">
       {#if $user}
         <li>
-          <a on:click={toggleSidebar} href="/auth/my-account">My Account</a>
+          <a on:click={toggleSidebar} href="/auth/my-account"
+            ><Account />My Account</a
+          >
         </li>
         <li>
           <form action="/auth?/logout" method="post">
-            <button type="submit"> Logout </button>
+            <button type="submit" class="flex space-x-2"
+              ><Logout /> <span>Logout</span>
+            </button>
           </form>
         </li>
       {:else}
-        <li><a on:click={toggleSidebar} href="/auth/login">Login</a></li>
+        <li>
+          <a on:click={toggleSidebar} href="/auth/login"><Login /> Login</a>
+        </li>
       {/if}
 
       <div class="divider"></div>
-      <li><a on:click={toggleSidebar} href="/recipes">Recipes</a></li>
-      <li><a on:click={toggleSidebar} href="/ingredients">Ingredients</a></li>
+      <li>
+        <a on:click={toggleSidebar} href="/recipes">
+          <Glass />
+          Recipes</a
+        >
+      </li>
+      <li>
+        <a on:click={toggleSidebar} href="/ingredients">
+          <Bottle />
+          Ingredients</a
+        >
+      </li>
       <div class="divider"></div>
-      <li><a on:click={toggleSidebar} href="/about">About</a></li>
+      <li><a on:click={toggleSidebar} href="/about"><About /> About</a></li>
     </ul>
   </div>
 </div>

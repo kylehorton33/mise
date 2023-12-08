@@ -14,8 +14,13 @@ test('expected links are in sidebar', async ({ page }) => {
   await page.getByRole('navigation').getByAltText('menu-icon').click()
 
   await expect(page.getByRole('link', { name: 'Login' })).toBeVisible()
+  await expect(page.getByAltText('login-icon')).toBeVisible()
   await expect(page.getByRole('link', { name: 'Ingredients' })).toBeVisible()
+  await expect(page.getByAltText('bottle-icon')).toBeVisible()
   await expect(page.getByRole('link', { name: 'Recipes' })).toBeVisible()
+  await expect(page.getByAltText('glass-icon')).toBeVisible()
+  await expect(page.getByRole('link', { name: 'About' })).toBeVisible()
+  await expect(page.getByAltText('about-icon')).toBeVisible()
 })
 
 test('auth routes exist', async ({ request, page }) => {

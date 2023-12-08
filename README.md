@@ -18,6 +18,6 @@ npm i
 
 # Features
 
-- Navbar/Sidebar (change links depending on user)
+- Navbar/Sidebar (change links depending on user), SVG icons
 - Login Page, simulate user, Logout
 - Planned Routes (ingrediends, recipes, about)
