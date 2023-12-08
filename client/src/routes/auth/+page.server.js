@@ -18,5 +18,9 @@ export const actions = {
       throw error(err.status, err.message)
     }
     throw redirect(303, '/')
+  },
+  logout: async ({cookies}) => {
+    cookies.delete('user')
+    throw redirect(303, '/')
   }
 }

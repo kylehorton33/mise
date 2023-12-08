@@ -19,6 +19,13 @@
     ></label>
     <ul class="menu mt-16 p-4 w-52 bg-base-200 text-base-content">
       <li><a on:click={toggleSidebar} href="/auth/login">Login</a></li>
+      <li>
+        <form action="/auth?/logout" method="post">
+          <button type="submit">
+            Logout
+          </button>
+        </form>
+      </li>
     </ul>
   </div>
 </div>
