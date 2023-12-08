@@ -14,7 +14,7 @@ export const actions = {
         cookies.set('user', body.email, { path: '/' })
       }
     } catch (err) {
-      console.log(err)
+      console.log('[ERROR] /auth/page.server.js', err)
       throw error(err.status, err.message)
     }
     throw redirect(303, '/')
