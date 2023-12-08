@@ -18,5 +18,6 @@ npm i
 
 # Features
 
-- Navbar
-- Login Page, simulate user
+- Navbar/Sidebar (change links depending on user)
+- Login Page, simulate user, Logout
+- Planned Routes (ingrediends, recipes, about)
