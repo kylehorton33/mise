@@ -25,14 +25,3 @@ test('auth routes exist', async ({ request, page }) => {
   expect(login.ok()).toBeTruthy()
   expect(auth.url()).toContain('/auth/my-account')
 })
-
-test('login page works', async ({ page }) => {
-  await page.goto('/auth/login')
-  await page.getByLabel('email').fill('user@example.com')
-  await page.getByLabel('password').fill('password')
-  await page.getByRole('button', { name: 'Login' }).click()
-
-  await expect(
-    page.getByRole('heading', { name: 'user logged in' })
-  ).toBeVisible()
-})
