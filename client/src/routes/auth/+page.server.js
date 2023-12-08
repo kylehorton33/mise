@@ -9,12 +9,13 @@ export const actions = {
     const body = Object.fromEntries(await request.formData())
 
     try {
-      // simulate user login
       if (body.email === 'user@example.com' && body.password === 'password') {
         cookies.set('user', body.email, { path: '/' })
+      } else {
+        console.error('[ERROR] wrong username/password')
       }
     } catch (err) {
-      console.log('[ERROR] /auth/page.server.js', err)
+      console.error('[ERROR] /auth/page.server.js', err)
       throw error(err.status, err.message)
     }
     throw redirect(303, '/')

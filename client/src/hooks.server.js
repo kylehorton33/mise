@@ -3,10 +3,8 @@ export const handle = async ({ event, resolve }) => {
 
   try {
     event.locals.user = token
-  } catch (error) {
-    console.log('[ERROR] hooks.server.js', error)
-    event.locals.user = null
-    event.cookies.delete('user')
+  } catch (err) {
+    console.error('[ERROR] hooks.server.js', err)
   }
 
   const response = await resolve(event)

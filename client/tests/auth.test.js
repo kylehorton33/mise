@@ -19,7 +19,7 @@ test('logout success', async ({ page }) => {
   )
   await page.getByRole('navigation').getByAltText('menu-icon').click()
   await page.getByRole('button', { name: 'Logout' }).click()
-  await expect(page.getByRole('heading')).toHaveText('no user')
+  await expect(page.getByRole('button', { name: 'Login' })).toBeVisible()
 })
 
 test('expected links are in sidebar', async ({ page }) => {

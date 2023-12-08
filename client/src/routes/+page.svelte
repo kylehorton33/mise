@@ -1,7 +1,7 @@
 <script>
   import { user } from '$lib/stores'
-  export let data
 
+  export let data
   user.set(data.user)
 </script>
 

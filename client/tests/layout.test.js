@@ -28,7 +28,7 @@ test('auth routes exist', async ({ request, page }) => {
   expect(auth.url()).toContain('/auth/my-account')
 })
 
-test('other routes exist', async ({ request, page }) => {
+test('other routes exist', async ({ request }) => {
   const ingredients = await request.get('/ingredients')
   const recipes = await request.get('/recipes')
   const about = await request.get('/about')
