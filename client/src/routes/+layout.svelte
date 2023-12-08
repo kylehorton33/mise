@@ -8,7 +8,7 @@
   user.set(data.user)
 </script>
 
-<main class="flex flex-col h-screen bg-neutral">
+<main class="flex flex-col h-screen">
   <Navbar />
 
   <slot />
