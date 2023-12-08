@@ -21,6 +21,6 @@ export const actions = {
   },
   logout: async ({ cookies }) => {
     cookies.delete('user')
-    throw redirect(303, '/')
+    throw redirect(303, '/auth/login')
   }
 }
