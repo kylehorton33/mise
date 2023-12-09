@@ -8,14 +8,14 @@ test('recipe content is available', async ({ page }) => {
   await expect(page.getByRole('heading')).toHaveText('Recipes')
   await expect(
     page.getByTestId('recipe-list').getByRole('listitem')
-  ).toHaveCount(3)
+  ).toHaveCount(4)
 })
 
 test('filter function works', async ({ page }) => {
   await page.getByLabel('filter').fill('Word')
   await expect(
     page.getByTestId('recipe-list').getByRole('listitem')
-  ).toHaveCount(1)
+  ).toHaveCount(2)
   await expect(
     page
       .getByTestId('recipe-list')
