@@ -26,7 +26,8 @@
   <ul data-testid="ingredient-list" class="list-disc list-inside w-72">
     {#each data.ingredients as { name, inStock }}
       <li
-        class="{filterTerm ^ name.includes(filterTerm)
+        class="{filterTerm ^
+        name.toLowerCase().includes(filterTerm.toLowerCase())
           ? ''
           : 'hidden'} flex mb-4 my-auto"
       >

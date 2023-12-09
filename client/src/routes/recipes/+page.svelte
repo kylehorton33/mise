@@ -20,7 +20,9 @@
     {#each data.recipes as { name, missing, ingredients }}
       <li
         class="{filterTerm ^
-        (name + ingredients.map((i) => i.name).toString()).includes(filterTerm)
+        (name + ingredients.map((i) => i.name).toString())
+          .toLowerCase()
+          .includes(filterTerm.toLowerCase())
           ? ''
           : 'hidden'} flex mb-4 my-auto"
       >
