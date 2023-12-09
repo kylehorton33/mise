@@ -1,6 +1,6 @@
 <script>
   export let data
-  let filterTerm = "";
+  let filterTerm = ''
 </script>
 
 <div class="p-4 flex flex-col items-center space-y-4 w-96 mx-auto">
@@ -13,10 +13,17 @@
     placeholder="Filter"
     class="input input-bordered w-full max-w-xs"
   />
-  <ul data-testid="recipe-list" class="list-disc list-inside w-96 pl-8">
-    {#each data.recipes as recipe}
-      <li class={filterTerm ^ recipe.includes(filterTerm) ? '' : 'hidden'}>
-        {recipe}
+  <ul data-testid="recipe-list" class="list-disc list-inside w-72">
+    {#each data.recipes as {name, missing}}
+      <li
+        class="{filterTerm ^ name.includes(filterTerm) ? '' : 'hidden'} flex mb-4 my-auto"
+      >
+        <div class="flex flex-col">
+          <span>{name}</span>
+          <span>ingredients...</span>
+        </div><span class="grow"></span><span
+          class="badge {missing ? 'badge-warning' : 'badge-success'}">{missing}</span
+        >
       </li>
     {/each}
   </ul>
