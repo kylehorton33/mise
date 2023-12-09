@@ -27,8 +27,8 @@
           : 'hidden'} flex mb-4 my-auto"
       >
         <div class="flex flex-col">
-          <span>{name}</span>
-          <span>{ingredients.map((i) => i.name).join(' | ')}</span>
+          <span class="uppercase underline">{name}</span>
+          <span class="text-sm">{ingredients.map((i) => i.name).join(' | ')}</span>
         </div>
         <span class="grow"></span><span
           class="badge {missing ? 'badge-warning' : 'badge-success'}"

@@ -31,7 +31,7 @@
           ? ''
           : 'hidden'} flex mb-4 my-auto"
       >
-        <span>{name}</span>
+        <span class="uppercase">{name}</span>
         <span class="grow"></span>
         <span>
           <input
