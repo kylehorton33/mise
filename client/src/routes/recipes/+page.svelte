@@ -13,7 +13,7 @@
     placeholder="Filter"
     class="input input-bordered w-full max-w-xs"
   />
-  <ul data-testid="recipe-list" class="list-disc list-inside w-72 md:w-1/3">
+  <ul data-testid="recipe-list" class="list-disc list-inside w-72 md:w-1/3 md:max-w-lg">
     {#each data.recipes as { name, missing }}
       <li
         class="{filterTerm ^ name.includes(filterTerm)
