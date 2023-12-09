@@ -1,5 +1,9 @@
 export const load = () => {
   return {
-    ingredients: ['a', 'b', 'c']
+    ingredients: [
+      {name: 'a', inStock: true},
+      {name: 'b', inStock: false},
+      {name: 'c', inStock: true},
+    ]
   }
 }
