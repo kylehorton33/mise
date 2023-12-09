@@ -18,7 +18,7 @@
       <span class="grow"></span>
       <span class="text-sm">Missing:</span>
     </li>
-    {#each data.recipes as { name, missing, ingredients }}
+    {#each data.recipes as { name, color, missing, ingredients }}
       <li
         class="{filterTerm ^
         (name + ingredients.map((i) => i.name).toString())
@@ -28,13 +28,21 @@
           : 'hidden'} flex mb-4 my-auto"
       >
         <div class="flex flex-col">
-          <span class="uppercase underline">{name}</span>
+          <div>
+            <div class="avatar">
+              <div
+                style="background: {color} ;"
+                class="bg-neutral rounded-full w-3"
+              ></div>
+            </div>
+            <span class="uppercase underline">{name}</span>
+          </div>
           <span class="text-sm"
             >{ingredients.map((i) => i.name).join(' | ')}</span
           >
         </div>
         <span class="grow"></span><span
-          class="badge {missing ? 'badge-warning' : 'badge-success'}"
+          class="badge {missing ? 'badge-neutral' : 'badge-success'}"
           >{missing}</span
         >
       </li>

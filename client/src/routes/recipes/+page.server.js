@@ -2,6 +2,7 @@ export const load = () => {
   const allRecipes = [
     {
       name: 'negroni',
+      color: '#820202',
       ingredients: [
         { name: 'gin', inStock: true, unit: 'oz' },
         { name: 'Campari', inStock: true, unit: 'oz' },
@@ -10,6 +11,7 @@ export const load = () => {
     },
     {
       name: 'daiquiri',
+      color: '#5fad47',
       ingredients: [
         { name: 'rum', inStock: false, unit: 'oz' },
         { name: 'lime juice', inStock: false, unit: 'oz' },
@@ -18,6 +20,7 @@ export const load = () => {
     },
     {
       name: 'Last Word',
+      color: '#7fb820',
       ingredients: [
         { name: 'gin', inStock: true, unit: 'oz' },
         { name: 'green Chartreuse', inStock: true, unit: 'oz' },
