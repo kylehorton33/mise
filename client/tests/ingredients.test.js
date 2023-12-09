@@ -8,14 +8,21 @@ test('ingredient content is available', async ({ page }) => {
   await expect(page.getByRole('heading')).toHaveText('Ingredients')
   await expect(
     page.getByTestId('ingredient-list').getByRole('listitem')
-  ).toHaveCount(3)
+  ).toHaveCount(6)
 })
 
 test('filter function works', async ({ page }) => {
   await expect(
     page.getByTestId('ingredient-list').getByRole('listitem')
-  ).toHaveText(['a', 'b', 'c'])
-  await page.getByLabel('filter').fill('a')
+  ).toHaveText([
+    'Campari',
+    'gin',
+    'lime juice',
+    'rum',
+    'simple syrup',
+    'sweet vermouth'
+  ])
+  await page.getByLabel('filter').fill('vermouth')
   await expect(
     page.getByTestId('ingredient-list').getByRole('listitem')
   ).toHaveCount(1)
@@ -23,6 +30,6 @@ test('filter function works', async ({ page }) => {
     page
       .getByTestId('recipe-list')
       .getByRole('listitem')
-      .filter({ hasText: 'b' })
+      .filter({ hasText: 'Campari' })
   ).toHaveCount(0)
 })

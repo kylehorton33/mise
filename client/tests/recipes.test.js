@@ -8,21 +8,18 @@ test('recipe content is available', async ({ page }) => {
   await expect(page.getByRole('heading')).toHaveText('Recipes')
   await expect(
     page.getByTestId('recipe-list').getByRole('listitem')
-  ).toHaveCount(4)
+  ).toHaveCount(3)
 })
 
 test('filter function works', async ({ page }) => {
-  await page.getByLabel('filter').fill('uno')
+  await page.getByLabel('filter').fill('Word')
   await expect(
-    page
-      .getByTestId('recipe-list')
-      .getByRole('listitem')
-      .filter({ hasText: 'uno' })
+    page.getByTestId('recipe-list').getByRole('listitem')
   ).toHaveCount(1)
   await expect(
     page
       .getByTestId('recipe-list')
       .getByRole('listitem')
-      .filter({ hasText: 'dos' })
+      .filter({ hasText: 'negroni' })
   ).toHaveCount(0)
 })

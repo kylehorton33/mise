@@ -1,9 +1,12 @@
 export const load = () => {
   return {
     ingredients: [
-      { name: 'a', inStock: true },
-      { name: 'b', inStock: false },
-      { name: 'c', inStock: true }
+      { name: 'Campari', inStock: true },
+      { name: 'gin', inStock: true },
+      { name: 'lime juice', inStock: false },
+      { name: 'rum', inStock: false },
+      { name: 'simple syrup', inStock: true },
+      { name: 'sweet vermouth', inStock: true }
     ]
   }
 }
