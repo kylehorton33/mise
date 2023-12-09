@@ -20,4 +20,4 @@ npm i
 
 - Navbar/Sidebar (change links depending on user), SVG icons
 - Login Page, simulate user, Logout
-- Planned Routes (ingrediends, recipes, about)
+- Ingredients/Recipe Pages
