@@ -5,7 +5,7 @@ test('index page has expected navbar', async ({ page }) => {
   const navbar = page.getByRole('navigation')
   await expect(navbar).toBeVisible()
   await expect(navbar.getByText('mise')).toBeVisible()
-  await expect(navbar.getByAltText('search-icon')).toBeVisible()
+  await expect(navbar.getByRole('link', { name: 'Login' }).nth(0)).toBeVisible()
   await expect(navbar.getByAltText('menu-icon')).toBeVisible()
 })
 
@@ -13,7 +13,7 @@ test('expected links are in sidebar', async ({ page }) => {
   await page.goto('/')
   await page.getByRole('navigation').getByAltText('menu-icon').click()
 
-  await expect(page.getByRole('link', { name: 'Login' })).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Login' }).nth(1)).toBeVisible()
   await expect(page.getByAltText('login-icon')).toBeVisible()
   await expect(page.getByRole('link', { name: 'Ingredients' })).toBeVisible()
   await expect(page.getByAltText('bottle-icon')).toBeVisible()
