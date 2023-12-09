@@ -3,7 +3,7 @@
   let filterTerm = ''
 </script>
 
-<div class="p-4 flex flex-col items-center space-y-4 w-72 mx-auto">
+<div class="p-4 flex flex-col items-center space-y-4 w-72 md:w-full mx-auto">
   <h1 class="text-xl text-center uppercase">Recipes</h1>
   <input
     type="text"
@@ -13,7 +13,7 @@
     placeholder="Filter"
     class="input input-bordered w-full max-w-xs"
   />
-  <ul data-testid="recipe-list" class="list-disc list-inside w-72">
+  <ul data-testid="recipe-list" class="list-disc list-inside w-72 md:w-1/3">
     {#each data.recipes as { name, missing }}
       <li
         class="{filterTerm ^ name.includes(filterTerm)
