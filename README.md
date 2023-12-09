@@ -21,3 +21,14 @@ npm i
 - Navbar/Sidebar (change links depending on user), SVG icons
 - Login Page, simulate user, Logout
 - Ingredients/Recipe Pages, filter functionality
+
+# Data Model Plan
+
+### ingredients
+- name: 'Campari' (str, unique)
+- inStock: true (bool)
+- unit: 'oz' (str)
+
+### recipes
+- name: 'Campari' (str, unique)
+- ingredients: ['Campari', 'gin', 'sweet vermouth'] (mutliref -> ingredients)

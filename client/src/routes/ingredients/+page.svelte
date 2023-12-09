@@ -14,7 +14,7 @@
     class="input input-bordered w-full max-w-xs"
   />
   <ul data-testid="ingredient-list" class="list-disc list-inside w-72">
-    {#each data.ingredients as {name, inStock}}
+    {#each data.ingredients as { name, inStock }}
       <li
         class="{filterTerm ^ name.includes(filterTerm)
           ? ''
