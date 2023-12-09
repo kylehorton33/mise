@@ -12,6 +12,7 @@ export const actions = {
   stock: async ({ request }) => {
     const body = Object.fromEntries(await request.formData())
 
+    // set stock of ingredient
     console.log(body)
   }
 }

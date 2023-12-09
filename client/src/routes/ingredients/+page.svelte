@@ -2,9 +2,14 @@
   export let data
   let filterTerm = ''
 
-  function handleChange(name, inStock) {
-    // set inStock for particular ingredient
-    console.log(name, inStock)
+  function handleChange(data) {
+    const formData = new FormData()
+    formData.append('name', data.name)
+    formData.append('inStock', data.inStock)
+    fetch('?/stock', {
+      method: 'POST',
+      body: formData
+    })
   }
 </script>
 
@@ -32,7 +37,7 @@
             type="checkbox"
             checked={inStock}
             class="checkbox"
-            on:change={() => handleChange(name, inStock)}
+            on:change={() => handleChange({ name, inStock })}
           />
         </span>
       </li>
