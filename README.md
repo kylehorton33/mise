@@ -32,3 +32,6 @@ npm i
 ### recipes
 - name: 'Campari' (str, unique)
 - ingredients: ['Campari', 'gin', 'sweet vermouth'] (mutliref -> ingredients)
+- recipe: 'Mix all ingredients' (text)
+
+? maybe include ingredient amounts directly in recipe (repeating data from `ingredients` field but then don't need to deal with new sub-level of query)

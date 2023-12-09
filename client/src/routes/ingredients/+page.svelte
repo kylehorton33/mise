@@ -1,6 +1,11 @@
 <script>
   export let data
   let filterTerm = ''
+
+  function handleChange(name, inStock) {
+    // set inStock for particular ingredient
+    console.log(name, inStock)
+  }
 </script>
 
 <div class="p-4 flex flex-col items-center space-y-4">
@@ -23,7 +28,12 @@
         <span>{name}</span>
         <span class="grow"></span>
         <span>
-          <input type="checkbox" checked={inStock} class="checkbox" />
+          <input
+            type="checkbox"
+            checked={inStock}
+            class="checkbox"
+            on:change={() => handleChange(name, inStock)}
+          />
         </span>
       </li>
     {/each}

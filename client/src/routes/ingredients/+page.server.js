@@ -7,3 +7,11 @@ export const load = () => {
     ]
   }
 }
+
+export const actions = {
+  stock: async ({ request }) => {
+    const body = Object.fromEntries(await request.formData())
+
+    console.log(body)
+  }
+}
