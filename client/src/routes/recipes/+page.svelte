@@ -3,7 +3,7 @@
   let filterTerm = ''
 </script>
 
-<div class="p-4 flex flex-col items-center space-y-4 w-96 mx-auto">
+<div class="p-4 flex flex-col items-center space-y-4 w-72 mx-auto">
   <h1 class="text-xl text-center uppercase">Recipes</h1>
   <input
     type="text"
