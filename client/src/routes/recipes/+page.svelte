@@ -18,10 +18,10 @@
       <span class="grow"></span>
       <span class="text-sm">Missing:</span>
     </li>
-    {#each data.recipes as { name, color, missing, ingredients }}
+    {#each data.recipes as { name, color, missing, ingredientLines }}
       <li
         class="{filterTerm ^
-        (name + ingredients.map((i) => i.name).toString())
+        (name + ingredientLines.map((l) => l.ingredient.name).toString())
           .toLowerCase()
           .includes(filterTerm.toLowerCase())
           ? ''
@@ -33,7 +33,7 @@
             <span class="uppercase underline">{name}</span>
           </div>
           <span class="text-sm"
-            >{ingredients.map((i) => i.name).join(' | ')}</span
+            >{ingredientLines.map((l) => l.ingredient.name).join(' | ')}</span
           >
         </a>
         <span class="grow"></span><span
