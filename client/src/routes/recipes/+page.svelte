@@ -29,11 +29,7 @@
       >
         <a href="/recipes/{name}" class="flex flex-col">
           <div>
-            <div class="avatar">
-              <div
-                style="background: {color} ;"
-                class="bg-neutral rounded-full w-3"
-              ></div>
+            <div class="badge badge-sm" style="background: {color} ;">
             </div>
             <span class="uppercase underline">{name}</span>
           </div>
