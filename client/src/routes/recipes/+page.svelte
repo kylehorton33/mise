@@ -27,7 +27,7 @@
           ? ''
           : 'hidden'} flex mb-4 my-auto"
       >
-        <div class="flex flex-col">
+        <a href="/recipes/{name}" class="flex flex-col">
           <div>
             <div class="avatar">
               <div
@@ -40,7 +40,7 @@
           <span class="text-sm"
             >{ingredients.map((i) => i.name).join(' | ')}</span
           >
-        </div>
+        </a>
         <span class="grow"></span><span
           class="badge {missing ? 'badge-neutral' : 'badge-success'}"
           >{missing}</span
