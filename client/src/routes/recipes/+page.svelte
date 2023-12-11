@@ -29,8 +29,7 @@
       >
         <a href="/recipes/{name}" class="flex flex-col">
           <div>
-            <div class="badge badge-sm" style="background: {color} ;">
-            </div>
+            <div class="badge badge-sm" style="background: {color} ;"></div>
             <span class="uppercase underline">{name}</span>
           </div>
           <span class="text-sm"
